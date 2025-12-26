@@ -19,6 +19,7 @@ def main():
         dt = fps_clock.tick(60)
         screen.fill("black")
         player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, PLAYER_RADIUS)
+        player.update(dt)
         player.draw(screen)
         pygame.display.flip()
     
