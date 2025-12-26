@@ -1,6 +1,7 @@
 import pygame
-from constants import SCREEN_WIDTH, SCREEN_HEIGHT
+from constants import SCREEN_WIDTH, SCREEN_HEIGHT, PLAYER_RADIUS
 from logger import log_state
+from player import Player
 
 def main():
     pygame.init()
@@ -17,6 +18,8 @@ def main():
             
         dt = fps_clock.tick(60)
         screen.fill("black")
+        player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, PLAYER_RADIUS)
+        player.draw(screen)
         pygame.display.flip()
     
 
